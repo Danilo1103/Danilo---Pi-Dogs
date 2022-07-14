@@ -1,0 +1,90 @@
+
+header{
+    width: 100%;
+    top: 20px;
+    left: 20px;
+    background: rgba( 255, 255, 255, 0.1 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 2.5px );
+-webkit-backdrop-filter: blur( 2.5px );
+border-radius: 10px;
+    
+}
+
+.header{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.logo img{
+    width: 150px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.crear button{
+    height: 40px;
+    border-radius: 10px;
+    border-color: rgb(160, 153, 153);
+    cursor: pointer;
+}
+
+.search input{
+    width: 190px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: rgb(160, 153, 153);
+}
+
+.search button{
+    height: 39px;
+    border-radius: 10px;
+    border-color: rgb(160, 153, 153);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px){
+    .logo img{
+        width: 90px;
+        border-radius: 5px;
+    }
+    .search input{
+        padding: 0;
+        width: 135px;
+        height: 30px;
+        border-radius: 5px;
+    }
+    .search button{
+
+        height: 35px;
+        border-color: none;
+        border-radius: 5px;
+    }
+    
+}
+
+
+@media screen and (max-width: 400px){
+
+    .logo img{
+        width: 75px;
+        border-radius: 5px;
+    }
+    .search input{
+        padding: 0;
+        width: 135px;
+        height: 30px;
+        border-radius: 5px;
+    }
+    .search button{
+
+        height: 35px;
+        border-color: none;
+        border-radius: 5px;
+    }
+} 

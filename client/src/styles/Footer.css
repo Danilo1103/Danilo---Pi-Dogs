@@ -1,0 +1,27 @@
+html {
+    min-height: 100%;
+    position: relative;
+  }
+  body {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+.cont-footer{
+    background-color: rgb(68, 67, 67);
+    color: white;
+  position: absolute; 
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+
+.cont-footer p{
+    margin: 10px;
+    color: #fff;
+}
+
+.cont-footer p a{
+    color: rgb(243, 230, 82);
+}
+

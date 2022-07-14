@@ -1,0 +1,134 @@
+.all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bolder;
+    margin: auto;
+}
+.listaPag li:hover{
+    transform: translateY(-2px);
+}
+
+.listaPag{
+    display: flex;
+    list-style: none;
+}
+
+.listaPag li{
+    padding: 9px 3px;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    background-color:  #8e8923;
+    border-radius: 5px;
+    margin: 1px;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+
+/* .listaPag li:hover{
+    background-color: rgb(128, 128, 128);
+    color: white;
+} */
+
+
+.listaPag li.active{
+    background-color: #fcf013;
+    color: white;
+}
+
+
+.previous{
+    margin:1.5px;
+    position: relative;
+    color: white;
+    right: 1px;
+    font-weight: bolder;
+    background: none;
+    padding: 10px;
+    cursor: pointer;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    background-color:  #7c7b14;
+    border: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.previous:disabled {
+    background-color: rgb(128, 128, 128);
+}
+
+.next{
+    margin:1.5px;
+    position: relative;
+    font-weight: bolder;
+    color: white;
+    left: 1px;
+    cursor: pointer;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background-color:  #7c7b14;
+    border: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.next:disabled {
+    background-color: rgb(128, 128, 128);
+}
+
+
+
+.loading{
+    margin: auto;
+    background-color: azure;
+    cursor: default;
+
+    background: rgba( 255, 255, 255, 0.1 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 2.5px );
+-webkit-backdrop-filter: blur( 2.5px );
+border-radius: 10px;
+}
+
+.loading img{
+    border-radius: 25px;
+}
+
+.loading p{
+    font-weight: 900;
+    font-size: 30px;
+}
+
+
+
+
+
+@media screen and (max-width: 600px){
+    .all {
+        font-size: 8px;
+        font-weight: lighter;
+    }
+    .previous{
+        padding: 8px 2px 8px 2px
+    }
+    .next{
+        padding: 8px 2px 8px 2px
+    }
+}
+
+
+@media screen and (max-width: 400px){
+    .all {
+        font-size: 12px;
+        font-weight: bolder;
+    }
+    .previous{
+        padding: 6px 1px 6px 1px
+    }
+    .next{
+        padding: 6px 1px 6px 1px
+    }
+}
