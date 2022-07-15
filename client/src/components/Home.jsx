@@ -6,7 +6,7 @@ import Card from "./Card.jsx";
 import Paginado from "./Paginado";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import style from "../styles/Home.module.css"
+import "../styles/Home.css"
 import { Link } from "react-router-dom";
 
 export default function Home(){
@@ -69,14 +69,14 @@ return (
         <div>
             <div>
                 <NavBar setCurrentPage={setCurrentPage}/> 
-                <Link to= "/dogs"><button className={style.cta}>
+                <Link to= "/dogs"><button className="cta">
                 <span>Create dog</span>
                 <svg viewBox="0 0 13 10" height="10px" width="15px">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>
                 </svg>
                 </button></Link>
-                <div className={style.filter}>
+                <div className="filter">
                     <select onChange={handleSort}>
                         <option hidden>Order By Name</option>
                         <option value="asc">A-Z</option>
@@ -104,13 +104,13 @@ return (
             </div>
             
             
-                 <div className={style.paginado}>        
+                 <div className="paginado">        
                 <Paginado 
                 data ={charactersPerPage}
                 current = {currentPage} 
                 pageFunction = {paginado}
                 /></div>
-                <div className={style.cardsDog}>
+                <div className="cardsDog">
                 {
                 currentCharacters?.map(e => {
                         return (
