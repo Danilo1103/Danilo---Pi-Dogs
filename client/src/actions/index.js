@@ -2,14 +2,14 @@ import axios from "axios"
 
 export function postDog(payload){
     return async function(dispatch){
-        let result = await axios.post(`/dogs`,payload);
+        let result = await axios.post('/dogs',payload);
         return result;
     };
 };
 
 export function getAllDogs(){
     return async function(dispatch){
-        let json = await axios.get(`/dogs`);
+        let json = await axios.get('/dogs');
         return dispatch({
             type: "GET_ALL_DOGS",
             payload: json.data
@@ -47,7 +47,7 @@ export function getDogById(id) {
 
 export function getTemperaments() {
     return async function(dispatch){
-        let json = await axios.get(`/temperaments`);
+        let json = await axios.get('/temperaments');
         return dispatch({
             type: 'GET_TEMPERAMENTS',
             payload: json.data
@@ -87,7 +87,7 @@ export function orderByWeight(payload){
 export function deleteDog(id){
     return async function(dispatch){
         try{
-            let json = await axios.delete(`/dogsDelete/${id}`)
+            let json = await axios.delete('/dogsDelete/${id}')
             return dispatch({
                 type: "DELETE_DOG",
                 payload: json

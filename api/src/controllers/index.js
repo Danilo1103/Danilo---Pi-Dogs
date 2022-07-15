@@ -1,12 +1,12 @@
 const axios = require("axios")
 const {Temperament, Dog} = require('../db');
 require("dotenv").config();
-const {API_URL} = process.env;
+const {API_URL, API_KEY} = process.env;
 
 
 const dataApi = async(req, res)=>{
     try {
-    const infoApi = await axios.get(API_URL)
+    const infoApi = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`)
     const mapApi = await infoApi.data.map(d =>{
         return { 
             id: d.id,
@@ -28,7 +28,7 @@ const dataApi = async(req, res)=>{
 
 const dataApiTemper = async(req, res) => {
     try {
-        const infoApiTemper = await axios.get(API_URL)
+        const infoApiTemper = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`)
         let temp1 = infoApiTemper.data.map(d => d.temperament ? d.temperament : "no temperament");
         let temp2 = temp1.map(d => d.split(", "))
 
