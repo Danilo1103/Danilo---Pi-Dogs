@@ -87,7 +87,7 @@ export function orderByWeight(payload){
 export function deleteDog(id){
     return async function(dispatch){
         try{
-            let json = await axios.delete('/dogsDelete/${id}')
+            let json = await axios.delete(`/dogsDelete/${id}`)
             return dispatch({
                 type: "DELETE_DOG",
                 payload: json
