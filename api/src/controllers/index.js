@@ -37,7 +37,7 @@ const dataApiTemper = async(req, res) => {
             where: {name: el}
         })}
 
-        temperamentoBd = await Temperament.findAll();
+        const temperamentoBd = await Temperament.findAll();
         res.status(200).json(temperamentoBd)
     } catch (error) {
         res.status(404).send(error)
