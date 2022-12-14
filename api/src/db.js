@@ -5,7 +5,7 @@ const path = require('path');
 const {PGUSER, PGPASSWORD, PGHOST, PGPORT, PGDATABASE} = process.env;
 const { pg } = require('pg');
 
-const sequelize = new Sequelize(`postgresql://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}`, {
+const sequelize = new Sequelize(`postgresql://${ PGUSER }:${ PGPASSWORD }@${ PGHOST }:${ PGPORT }/${PGDATABASE }`, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
   dialectModule: pg
@@ -40,6 +40,7 @@ Temperament.belongsToMany(Dog, {through: "DogsTemperaments"}); // relacionar nue
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
+
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
