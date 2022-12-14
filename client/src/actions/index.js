@@ -56,7 +56,6 @@ export function getTemperaments() {
 };
 
 export function filterTemperaments (payload){
-    console.log(payload)
     return{
         type: "FILTER_BY_STATUS",
         payload

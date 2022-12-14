@@ -8,7 +8,7 @@ const router = Router();
 router.get('/dogs', searchNameDog ); 
 router.get('/dogs/:id', searchIdDog);
 router.post('/dogs', createDog);
-router.get("/temperaments", dataApiTemper);
+router.get('/temperaments', dataApiTemper);
 router.delete('/dogsDelete/:id', deleteDog);
 
 module.exports = router;

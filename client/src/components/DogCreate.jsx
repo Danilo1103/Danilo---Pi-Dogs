@@ -74,7 +74,6 @@ export default function DogCreate(){
 
     function handleSubmit(e){
         e.preventDefault();
-        console.log(input)
         dispatch(postDog(input))
         alert("Dog created!!")
         setInput({
