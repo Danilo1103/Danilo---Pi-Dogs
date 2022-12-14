@@ -1,7 +1,7 @@
 const axios = require("axios")
 const {Temperament, Dog} = require('../db');
 require("dotenv").config();
-const {API_URL, API_KEY} = process.env;
+const {API_KEY} = process.env;
 
 
 const dataApi = async(req, res)=>{
