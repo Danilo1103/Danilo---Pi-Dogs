@@ -28,19 +28,23 @@ const dataApi = async(req, res)=>{
 
 const dataApiTemper = async(req, res) => {
     try {
-        const infoApiTemper = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`)
-        let temp1 = infoApiTemper.data.map(d => d.temperament ? d.temperament : "no temperament");
-        let temp2 = temp1.map(d => d.split(", "))
+        //CARGAR DATABASE
+        // const upTemperaments = await getTemperamentsFromApi();
 
-        let setTemper = new Set (temp2.flat())
-        for (el of setTemper) {if (el) await Temperament.findOrCreate({
-            where: {name: el}
-        })}
-
-        const temperamentoBd = await Temperament.findAll();
-        res.status(200).json(temperamentoBd)
-    } catch (error) {
-        res.status(404).send(error)
+        // const arrayTemps = upTemperaments.map(e => e.name.split(", "));
+        // let setTemp = new Set(arrayTemps.flat()); // flat crea una nueva matriz con todos los elementos de sub-array [1.2[3.4]]
+        // //new set hace que no se repitan los mismos valores
+        // for (e of setTemp) {
+        //     if (e) await Temperament.findOrCreate({
+        //         where: {
+        //             name: e
+        //         }
+        //     });
+        // }
+        let tempers = await Temperament.findAll();
+        return res.json(tempers);
+    } catch {
+       console.log(e)
     }
     
 }

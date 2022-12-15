@@ -27,7 +27,7 @@ const paginado = (pageNumber) => {
 }
 
 
-const [dogState, setDogsState] = useState("");
+// const [dogState, setDogsState] = useState("");
 
 useEffect(()=>{
     dispatch(getAllDogs());
